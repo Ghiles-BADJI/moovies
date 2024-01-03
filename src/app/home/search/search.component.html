@@ -8,7 +8,7 @@
 
         <!-- <mat-form-field class="right-search-form" appearance="outline"> -->
             <mat-icon class="icon">search</mat-icon>
-            <input matInput placeholder="Titre du film" class="input">
+            <input matInput placeholder="Titre du film" class="input" (keyup)="filmSearch($event)" #input>
         <!-- </mat-form-field> -->
 
     </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
@@ -23,5 +23,15 @@ import { MatCardModule } from '@angular/material/card';
   styleUrl: './search.component.scss'
 })
 export class SearchComponent {
+
+  @Output() sendSearchValue = new EventEmitter<string>;
+
   value = 'Clear me';
+
+
+  filmSearch(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+
+    this.sendSearchValue.emit(filterValue);
+  }
 }

@@ -1,13 +1,14 @@
 <div class="card">
-<mat-card class="example-card">
+    <ng-template ngFor let-moovie [ngForOf]="films">
+<mat-card class="example-card" >
 
     <img mat-card-image class="img"
-        src="https://i2.wp.com/moviefail.com/wp-content/uploads/2014/11/interstellar1.jpeg?fit=1920%2C1080&ssl=1"
-        alt="Photo of Interstellar">
+        src={{moovie.img}}
+        alt={{moovie.title}}>
 
 </mat-card>
-
-<mat-card class="example-card">
+</ng-template>
+<!-- <mat-card class="example-card">
 
     <img mat-card-image class="img"
         src="https://addict-culture.com/wp-content/uploads/2018/05/PulpFiction_quad_UK-1-e1526824603757.jpg"
@@ -37,5 +38,5 @@
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVpNv5v1Did1jgjyDX2nqcq57Hvxpa6I6wHg&usqp=CAU"
         alt="La ligne verte">
 
-</mat-card>
+</mat-card> -->
 </div>

@@ -1,2 +1,2 @@
-<app-search></app-search>
-<app-card></app-card>
+<app-search (sendSearchValue)="FilterMoovies($event)"></app-search>
+<app-card [films]="mooviesfilter"></app-card>
