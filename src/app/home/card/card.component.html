@@ -1,14 +1,16 @@
 <div class="card">
     <ng-template ngFor let-moovie [ngForOf]="films">
-<mat-card class="example-card" >
+        <mat-card class="example-card">
 
-    <img mat-card-image class="img"
-        src={{moovie.img}}
-        alt={{moovie.title}}>
+            <img mat-card-image class="img" src={{moovie.img}} alt={{moovie.title}}>
 
-</mat-card>
-</ng-template>
-<!-- <mat-card class="example-card">
+        </mat-card>
+    </ng-template>
+
+    <ng-container *ngIf="films.length == 0">
+        <p>Le film que vous cherchez est introuvable...</p>
+    </ng-container>
+    <!-- <mat-card class="example-card">
 
     <img mat-card-image class="img"
         src="https://addict-culture.com/wp-content/uploads/2018/05/PulpFiction_quad_UK-1-e1526824603757.jpg"
